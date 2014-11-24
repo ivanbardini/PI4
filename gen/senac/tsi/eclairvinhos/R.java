@@ -50,21 +50,23 @@ public final class R {
         public static final int year=0x7f050005;
     }
     public static final class drawable {
-        public static final int counter_bg=0x7f020000;
-        public static final int ic_communities=0x7f020001;
-        public static final int ic_drawer=0x7f020002;
-        public static final int ic_home=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int ic_pages=0x7f020005;
-        public static final int ic_people=0x7f020006;
-        public static final int ic_photos=0x7f020007;
-        public static final int ic_whats_hot=0x7f020008;
-        public static final int list_item_bg_normal=0x7f020009;
-        public static final int list_item_bg_pressed=0x7f02000a;
-        public static final int list_row_bg=0x7f02000b;
-        public static final int list_row_bg_hover=0x7f02000c;
-        public static final int list_row_selector=0x7f02000d;
-        public static final int list_selector=0x7f02000e;
+        public static final int button=0x7f020000;
+        public static final int button_secondary=0x7f020001;
+        public static final int counter_bg=0x7f020002;
+        public static final int ic_communities=0x7f020003;
+        public static final int ic_drawer=0x7f020004;
+        public static final int ic_home=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int ic_pages=0x7f020007;
+        public static final int ic_people=0x7f020008;
+        public static final int ic_photos=0x7f020009;
+        public static final int ic_whats_hot=0x7f02000a;
+        public static final int list_item_bg_normal=0x7f02000b;
+        public static final int list_item_bg_pressed=0x7f02000c;
+        public static final int list_row_bg=0x7f02000d;
+        public static final int list_row_bg_hover=0x7f02000e;
+        public static final int list_row_selector=0x7f02000f;
+        public static final int list_selector=0x7f020010;
     }
     public static final class id {
         public static final int ScanButton=0x7f0a000c;
@@ -158,14 +160,29 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060002;
         public static final int app_name=0x7f060000;
+        public static final int btn_cadastrar=0x7f060004;
+        public static final int btn_entrar=0x7f060003;
+        public static final int btn_lerQRCode=0x7f06000f;
+        public static final int btn_logarDepois=0x7f060005;
         /**  Content Description 
          */
-        public static final int desc_list_item_icon=0x7f060003;
+        public static final int desc_list_item_icon=0x7f060012;
+        public static final int dsc_logo=0x7f060006;
         public static final int hello_world=0x7f060001;
-        public static final int title_activity_cadastro=0x7f060007;
-        public static final int title_activity_camera=0x7f060006;
-        public static final int title_activity_login=0x7f060004;
-        public static final int title_activity_x=0x7f060005;
+        public static final int lblDataNascimento=0x7f06000d;
+        public static final int lblEmail=0x7f060007;
+        public static final int lblNews=0x7f06000e;
+        public static final int lblNome=0x7f060009;
+        public static final int lblSenha=0x7f060008;
+        public static final int lblTelCelular=0x7f06000b;
+        public static final int lblTelComercial=0x7f06000a;
+        public static final int lblTelResidencial=0x7f06000c;
+        public static final int lbl_lendo=0x7f060010;
+        public static final int logoCat=0x7f060011;
+        public static final int title_activity_cadastro=0x7f060016;
+        public static final int title_activity_camera=0x7f060015;
+        public static final int title_activity_login=0x7f060013;
+        public static final int title_activity_x=0x7f060014;
     }
     public static final class style {
         /** 
