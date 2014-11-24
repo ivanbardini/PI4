@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#781834</color>
+    <color name="list_background_pressed">#380D1A</color>
+    <color name="list_divider">#491021</color>
+    <color name="counter_text_bg">#CCCCCC</color>
+    <color name="counter_text_color">#491021</color>
+    
+    <color name="genre">#666666</color>
+    <color name="year">#888888</color>
+    <color name="list_row_start_color">#ffffff</color>
+    <color name="list_row_end_color">#ffffff</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+</resources>

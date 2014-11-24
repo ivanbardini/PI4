@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+        <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/prod_img"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp" />
+        
+         <TextView
+        android:id="@+id/prod_nome"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prod_img"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
+ 
+    <!-- Rating -->
+    <TextView
+        android:id="@+id/prod_preco"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prod_nome"
+        android:layout_marginTop="1dip"
+        android:textSize="@dimen/rating" />
+     
+    <!-- Genre -->
+    <TextView
+        android:id="@+id/prod_categoria"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prod_preco"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/genre"
+        android:textSize="@dimen/genre" />
+ 
+    <!-- Release Year -->
+    <TextView
+        android:id="@+id/prod_descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prod_categoria"
+        android:textColor="@color/year"
+        android:textSize="@dimen/year" />
+
+    <Button
+        android:id="@+id/btn_comprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="18dp"
+        android:layout_below="@id/prod_descricao"
+        android:text="Comprar" />
+
+    <TextView
+        android:id="@+id/prod_qtd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/prod_img"
+        android:layout_alignTop="@+id/btn_comprar"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="15dp"
+        android:text="Quantidade:" />
+
+    <TextView
+        android:id="@+id/num_qtd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/prod_qtd"
+        android:layout_alignBottom="@+id/prod_qtd"
+        android:layout_toRightOf="@+id/prod_qtd"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/prod_add"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/num_qtd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/prod_rem"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/prod_add"
+        android:layout_alignBottom="@+id/prod_add"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/prod_add"
+        android:text="-" />
+
+</RelativeLayout>

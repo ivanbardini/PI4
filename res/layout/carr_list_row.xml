@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+        <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/item_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp" />
+        
+         <TextView
+        android:id="@+id/item_nome"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_img"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
+         
+       
+ 
+    <!-- Rating -->
+   
+    <TextView
+        android:id="@+id/_preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/item_img"
+        android:layout_below="@+id/item_quantidade"
+        android:textSize="@dimen/rating" 
+        android:text="Total: R$"/>
+     <TextView
+        android:id="@+id/item_preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:layout_below="@+id/item_quantidade"
+        android:layout_toRightOf="@+id/_preco"
+        android:textSize="@dimen/rating" />
+    <TextView
+        android:id="@+id/item_quantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/item_img"
+        android:layout_below="@+id/item_nome"
+        android:textSize="@dimen/rating" 
+		android:text="Quantidade:" />
+
+    <TextView
+        android:id="@+id/item_qtd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/item_quantidade"
+        android:layout_toRightOf="@+id/item_quantidade"
+        android:text="1" />
+
+<!--     <Button -->
+<!--         android:id="@+id/item_add" -->
+<!--         style="?android:attr/buttonStyleSmall" -->
+<!--         android:layout_width="40dp" -->
+<!--         android:layout_height="40dp" -->
+<!--         android:layout_below="@+id/item_qtd" -->
+<!--         android:layout_toLeftOf="@+id/item_rem" -->
+<!--         android:layout_marginRight="4dp" -->
+<!--         android:layout_marginTop="40dp" -->
+<!--         android:text="+" /> -->
+
+<!--     <Button -->
+<!--         android:id="@+id/item_rem" -->
+<!--         style="?android:attr/buttonStyleSmall" -->
+<!--         android:layout_width="40dp" -->
+<!--         android:layout_height="40dp" -->
+<!--         android:layout_alignBaseline="@+id/item_add" -->
+<!--         android:layout_alignBottom="@+id/item_add" -->
+<!--         android:layout_alignParentRight="true" -->
+<!--         android:text="-" /> -->
+
+</RelativeLayout>

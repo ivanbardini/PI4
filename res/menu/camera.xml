@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="senac.tsi.eclairvinhos.CameraActivity" >
+
+    <item
+        android:id="@+id/camera"
+        android:orderInCategory="100"
+        android:title="Camera"
+        android:icon="@drawable/ic_people"
+        android:showAsAction="always"
+        />
+
+</menu>
