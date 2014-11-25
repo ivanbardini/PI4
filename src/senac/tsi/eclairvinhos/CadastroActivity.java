@@ -15,9 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.http.AndroidHttpClient;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -29,7 +27,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class CadastroActivity extends Activity {
@@ -81,7 +78,15 @@ public class CadastroActivity extends Activity {
             try{
             	
     			// Showing progress dialog before making http request
-    			
+            	nome = (EditText)findViewById(R.id.nomeCompleto);
+        		email = (EditText)findViewById(R.id.cad_email);
+        		senha = (EditText)findViewById(R.id.cad_senha);
+        		cpf = (EditText)findViewById(R.id.cad_cpf);
+        		telCel = (EditText)findViewById(R.id.cad_cel);
+        		telRes = (EditText)findViewById(R.id.cad_telRes);
+        		telCom = (EditText)findViewById(R.id.cad_telCom);
+        		dataNasc = (EditText)findViewById(R.id.cad_dataNasc);
+        		newsLetter = (CheckBox)findViewById(R.id.ckb_newsl);
             		
         		
             	
@@ -95,6 +100,24 @@ public class CadastroActivity extends Activity {
 				 String sendTelRes = telRes.getText().toString();
 				 String sendTelCom = telCom.getText().toString();
 				 String sendDataNasc = dataNasc.getText().toString();
+				 
+				 String[] data = sendDataNasc.split("/");
+				 
+//				 if (data.length!=3 || data[2].length()!=4) {
+//				 	Toast tost = Toast.makeText(getApplicationContext(), "Preencha a data no formato dd/mm/aaaa", Toast.LENGTH_SHORT);
+//					tost.setGravity(Gravity.TOP, 0, 50);
+//					tost.show();
+//					return null;
+//				 }
+				 
+				 String newDate = "";
+				 for (int i = data.length - 1; i >= 0 ; i--) {
+					newDate += data[i];
+					if(i!=0)
+						newDate+="/";
+				}
+				 sendDataNasc = newDate;
+				 
 				 boolean sendNewsletter = newsLetter.isChecked();
             	
             	

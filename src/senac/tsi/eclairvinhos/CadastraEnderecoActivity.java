@@ -113,6 +113,14 @@ class NetworkCall extends AsyncTask<Void, Void, String> {
 			AndroidHttpClient client = AndroidHttpClient.newInstance(null);
 			
             try{
+            	nomeEnd = ((EditText)findViewById(R.id.end_nome)).getText().toString();
+        		logra = ((EditText)findViewById(R.id.end_logradouro)).getText().toString();
+        		num = ((EditText)findViewById(R.id.end_num)).getText().toString();
+        		cep = ((EditText)findViewById(R.id.end_cep)).getText().toString();
+        		compl = ((EditText)findViewById(R.id.end_complem)).getText().toString();
+        		cidade = ((EditText)findViewById(R.id.end_cidade)).getText().toString();
+        		pais = ((EditText)findViewById(R.id.end_pais)).getText().toString();
+        		uf = ((EditText)findViewById(R.id.end_uf)).getText().toString();
 
             	HttpPost post = new HttpPost("http://pieclair.azurewebsites.net/4Sem/webservices/cadastrarEndereco.php");
 
