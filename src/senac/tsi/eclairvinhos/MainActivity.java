@@ -212,7 +212,7 @@ public class MainActivity extends Activity {
             startActivity(ie);
 			break;
 		case 4:
-			//fragment = new SobreFragment();
+			fragment = new SobreFragment();
 			break;
 		case 5:
 			SharedPreferences pref = getSharedPreferences("userData", MODE_PRIVATE);

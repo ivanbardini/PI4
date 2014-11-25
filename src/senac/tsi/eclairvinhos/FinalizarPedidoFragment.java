@@ -67,6 +67,11 @@ public class FinalizarPedidoFragment extends Fragment {
 		(new getEnderecos()).execute((Void)null);
 		double totalPedido = 0;
 		
+		pDialog = new ProgressDialog(getActivity());
+		// Showing progress dialog before making http request
+		pDialog.setMessage("Loading...");
+		pDialog.show();
+				
 		sing = Singleton.getInstance();
 		List<ItemPedido> carr = sing.getCarrinho();
 		
@@ -101,6 +106,10 @@ public class FinalizarPedidoFragment extends Fragment {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
+				pDialog = new ProgressDialog(getActivity());
+				// Showing progress dialog before making http request
+				pDialog.setMessage("Loading...");
+				pDialog.show();
 				(new NetworkCall()).execute((Void)null);
 			}
 		});
@@ -110,9 +119,11 @@ public class FinalizarPedidoFragment extends Fragment {
 	
 	class NetworkCall extends AsyncTask<Void, Void, String> {
     	
+		
     	
 		@Override
 		protected String doInBackground(Void... params) {
+			
 			SharedPreferences prefs = getActivity().getSharedPreferences("userData", Context.MODE_PRIVATE); 
 			endereco = spinEnd.getSelectedItem().toString();
 			if (prefs.getInt("idCliente", -1) == -1 ) {
@@ -192,6 +203,7 @@ public class FinalizarPedidoFragment extends Fragment {
             	post.setEntity(ent);
             	
             	HttpResponse response = client.execute(post);
+            	hidePDialog();
             	
             	BufferedReader reader = new BufferedReader(new InputStreamReader(
             			response.getEntity().getContent()));
@@ -250,7 +262,7 @@ public class FinalizarPedidoFragment extends Fragment {
 
 	class getEnderecos extends AsyncTask<Void, Void, String> {
     	
-    	
+		   	
 		@Override
 		protected String doInBackground(Void... params) {
 			SharedPreferences prefs = getActivity().getSharedPreferences("userData", Context.MODE_PRIVATE); 
@@ -261,6 +273,8 @@ public class FinalizarPedidoFragment extends Fragment {
             	HttpPost get = new HttpPost("http://pieclair.azurewebsites.net/4Sem/webservices/getEndereco.php?id="+prefs.getInt("idCliente", -1));
             	
             	HttpResponse response = client.execute(get);
+            	
+            	hidePDialog();
             	
             	BufferedReader reader = new BufferedReader(new InputStreamReader(
             			response.getEntity().getContent()));
