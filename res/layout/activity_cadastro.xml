@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/cad_email"       
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:hint="@string/lblNome"> 
         <requestFocus />
         </EditText>
@@ -25,7 +25,7 @@
         android:layout_below="@+id/cad_email"
         android:ems="10"
         android:hint="@string/lblSenha"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:inputType="textPassword" />
 
     <EditText
@@ -35,7 +35,7 @@
         android:layout_below="@+id/nomeCompleto"
         android:ems="10"
         android:hint="@string/lblEmail"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:inputType="textEmailAddress" />
 
     <Button
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/ckb_newsl"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/button"
         android:text="@string/btn_cadastrar"
         android:textColor="#FFF" />
@@ -54,10 +54,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/cad_senha"
-        android:layout_below="@+id/cad_senha"
+        android:layout_below="@+id/cad_cpf"
         android:ems="10"
         android:hint="@string/lblTelCelular"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:inputType="phone" />
     
    <EditText
@@ -67,7 +67,7 @@
         android:layout_below="@+id/cad_cel"
         android:layout_centerVertical="true"
         android:ems="10"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:hint="@string/lblTelComercial"
         android:inputType="phone" />
 
@@ -78,7 +78,7 @@
         android:layout_alignLeft="@+id/cad_telCom"
         android:layout_below="@+id/cad_telCom"
         android:ems="10"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:hint="@string/lblTelResidencial"
         android:inputType="phone" />
     
@@ -130,12 +130,12 @@
 
     <EditText
         android:id="@+id/cad_cpf"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cad_senha"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:inputType="number" 
-        android:hint="CPF"/>
+        android:hint="@string/lblCpf" />
 
 </RelativeLayout>

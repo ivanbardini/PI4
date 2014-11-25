@@ -14,15 +14,20 @@
 
   <TextView
     android:id="@+id/scanText"
-    android:text="Scanning..."
+    android:text="@string/lbl_lendo"
+	android:gravity="center"
     android:layout_height="wrap_content" 
     android:layout_width="match_parent">
   </TextView>
   <Button
     android:id="@+id/ScanButton"
-    android:text="Scan"
-    android:layout_width="wrap_content"
+    android:text="@string/btn_lerQRCode"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:background="@drawable/button"
+    android:textColor = "#FFF" 
+    android:layout_margin="10dp"
+    
   />
 </LinearLayout>
