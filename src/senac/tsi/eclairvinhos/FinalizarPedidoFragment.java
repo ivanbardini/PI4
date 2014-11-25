@@ -165,11 +165,11 @@ public class FinalizarPedidoFragment extends Fragment {
             	List<ItemPedido> lista = sing.getCarrinho();
             	
             	for (ItemPedido itemPedido : lista) {
-					carrinho.put(new JSONObject("{idProduto:" +
+					carrinho.put(new JSONObject("{\"idProduto\":" +
 							String.valueOf(itemPedido.getProduto().getIdProduto()) +
-							", qtd:" +
+							", \"qtd\":" +
 							String.valueOf(itemPedido.getQtd()) +
-							", precoVenda:"+
+							", \"precoVenda\":"+
 							String.valueOf(itemPedido.getQtd()*itemPedido.getProduto().getPrecFinal())+
 							"}"));
 				}
@@ -225,7 +225,7 @@ public class FinalizarPedidoFragment extends Fragment {
 					Toast tost = Toast.makeText(getActivity(), resposta.getString("mensagem"), Toast.LENGTH_SHORT);
 					tost.setGravity(Gravity.TOP, 0, 50);
 					tost.show();
-				}else{
+				}
 				
 					//verificar preferences
 					
@@ -236,7 +236,7 @@ public class FinalizarPedidoFragment extends Fragment {
 					startActivity(i);
 					
 					
-				}
+				
 				
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
