@@ -231,7 +231,7 @@ public class FinalizarPedidoFragment extends Fragment {
 					
 					Toast toast = Toast.makeText(getActivity(), "Pedido efetuado com sucesso", Toast.LENGTH_SHORT);
 					toast.show();
-					
+					sing.esvaziar();
 					Intent i = new Intent(getActivity(), MainActivity.class);
 					startActivity(i);
 					

@@ -41,7 +41,9 @@ public class Singleton {
 	public List<ItemPedido> getCarrinho(){
 		return carrinho;
 	}
-	
+	public void esvaziar(){
+		carrinho.clear();
+	}
 	
 	
 }
