@@ -82,6 +82,11 @@ public class LojaFragment extends Fragment {
 //								response = response.replace("}", "},");
 //								response = "["+response+"]";
 //								response = response.replace("},]","}]");
+								
+								if (response.startsWith("﻿")){
+									response = response.replace("﻿","");
+								}
+								
 								JSONArray jsonArr = new JSONArray(response);
 								
 								for (int i = 0; i < jsonArr.length(); i++) {

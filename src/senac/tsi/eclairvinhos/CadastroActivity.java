@@ -168,7 +168,7 @@ public class CadastroActivity extends Activity {
 							tost.show();
 						}if (usuario.getString("mensagem") == "Cadastro efetuado com sucesso!") {
 							
-						Intent i = new Intent(getApplicationContext(), MainActivity.class);
+						Intent i = new Intent(getApplicationContext(), CadastraEnderecoActivity.class);
 						startActivity(i);
 						}
 						

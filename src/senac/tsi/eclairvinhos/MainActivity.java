@@ -81,12 +81,14 @@ public class MainActivity extends Activity {
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
 		// Categoria
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
-		// Meus Pedidos
+		// Meu Carrinho
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1), true, carrinhoCount));
-		// Sobre o APP
+		// Endereço
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));		
-		//logout
+		//Sobre
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
+		//logout
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(5, -1)));
 		
 
 		// Recycle the typed array
@@ -169,6 +171,10 @@ public class MainActivity extends Activity {
 			Intent i = new Intent(getApplicationContext(), CameraActivity.class);
 			startActivity(i);
 			return true;
+		case R.id.login:
+			Intent i1 = new Intent(getApplicationContext(), LoginActivity.class);
+			startActivity(i1);
+			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
@@ -202,9 +208,13 @@ public class MainActivity extends Activity {
 			fragment = new CarrinhoFragment();
 			break;
 		case 3:
-			//fragment = new CommunityFragment();
+			Intent ie = new Intent(this, CadastraEnderecoActivity.class);
+            startActivity(ie);
 			break;
 		case 4:
+			//fragment = new SobreFragment();
+			break;
+		case 5:
 			SharedPreferences pref = getSharedPreferences("userData", MODE_PRIVATE);
 			SharedPreferences.Editor editor = pref.edit();
 			

@@ -4,39 +4,48 @@
     <string name="app_name">Eclair Vinhos</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="btn_entrar" >Entrar</string>
-	<string name="btn_cadastrar" >Cadastrar</string>
-	<string name="btn_logarDepois">Logar depois</string>
-	<string name="dsc_logo">Logotipo</string>
-	<string name="lblEmail">Email</string>
-	<string name="lblSenha">Senha</string>
-	<string name="lblNome">Nome Completo</string>
-	<string name="lblTelComercial">Telefone comercial</string>
-	<string name="lblTelCelular">Telefone celular</string>
-	<string name="lblTelResidencial">Telefone residencial</string>
-	<string name="lblDataNascimento">Data de nascimento</string>
-	<string name="lblNews">Deseja receber novidades?</string>
-	<string name="btn_lerQRCode">Ler QRCode</string>
-	<string name="lbl_lendo">Lendo</string>
-	<string name="logoCat"></string>
-	
+    <string name="btn_entrar">Entrar</string>
+    <string name="btn_cadastrar">Cadastrar</string>
+    <string name="btn_logarDepois">Logar depois</string>
+    <string name="dsc_logo">Logotipo</string>
+    <string name="lblEmail">Email</string>
+    <string name="lblSenha">Senha</string>
+    <string name="lblNome">Nome Completo</string>
+    <string name="lblTelComercial">Telefone comercial</string>
+    <string name="lblTelCelular">Telefone celular</string>
+    <string name="lblTelResidencial">Telefone residencial</string>
+    <string name="lblDataNascimento">Data de nascimento</string>
+    <string name="lblNews">Deseja receber novidades?</string>
+    <string name="btn_lerQRCode">Ler QRCode</string>
+    <string name="lbl_lendo">Lendo</string>
+    <string name="logoCat"></string>
+    <string name="lblNomeEndereco">Nome do endereço</string>
+    <string name="lblLogradouro">Logradouro</string>
+    <string name="lblNumero">Número</string>
+    <string name="lblCep">CEP</string>
+    <string name="lblComplemento">Complemento</string>
+    <string name="lblCidade">Cidade</string>
+    <string name="lblPais">País</string>
+    <string name="lblUF">UF</string>
+    
+    
 
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
         <item>Início</item>
-        <item>Categoria</item>
-        <item>Meus Pedidos</item>
-        <item>Sobre o App</item>
+        <item>Categorias</item>
+        <item>Meu Carrinho</item>
+        <item>Meus Endereços</item>
+        <item>Sobre o App</item>        
         <item>Logout</item>
     </string-array>
-
     <string-array name="forma_pgto">
         <item>Cartão de crédito</item>
         <item>Boleto</item>
-        <item>pagSeguro</item>  
-        <item>PayPal</item>        
+        <item>pagSeguro</item>
+        <item>PayPal</item>
     </string-array>
-    
+
     <!-- Nav Drawer List Item Icons -->
     <!-- Keep them in order as the titles are in -->
     <array name="nav_drawer_icons">
@@ -52,5 +61,6 @@
     <string name="title_activity_x">XActivity</string>
     <string name="title_activity_camera">CameraActivity</string>
     <string name="title_activity_cadastro">CadastroActivity</string>
+    <string name="title_activity_cadastra_endereco">CadastraEnderecoActivity</string>
 
 </resources>

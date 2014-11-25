@@ -46,6 +46,10 @@
             android:name=".CadastroActivity"
             android:label="@string/title_activity_cadastro" >
         </activity>
+        <activity
+            android:name=".CadastraEnderecoActivity"
+            android:label="@string/title_activity_cadastra_endereco" >
+        </activity>
     </application>
 
 </manifest>
