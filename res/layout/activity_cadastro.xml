@@ -14,7 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/cad_email"       
         android:layout_marginTop="10dp"
-        android:hint="@string/lblNome" />
+        android:hint="@string/lblNome"> 
+        <requestFocus />
+        </EditText>
     
     <EditText
         android:id="@+id/cad_senha"
@@ -34,10 +36,7 @@
         android:ems="10"
         android:hint="@string/lblEmail"
         android:layout_marginTop="10dp"
-        android:inputType="textEmailAddress" >
-
-        <requestFocus />
-    </EditText>
+        android:inputType="textEmailAddress" />
 
     <Button
         android:id="@+id/btn_cadastrar"
@@ -84,22 +83,49 @@
         android:inputType="phone" />
     
     <EditText
-        android:id="@+id/cad_dataNasc"
-        android:layout_width="match_parent"
+        android:id="@+id/cad_dia"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cad_telRes"
+        android:layout_below="@+id/cad_telRes" 
+        android:layout_toLeftOf="@+id/cad_dia"       
         android:ems="10"
         android:layout_marginTop="10dp"
-        android:hint="@string/lblDataNascimento"
-        android:inputType="date" />
+        android:hint="@string/lblDia"
+        android:inputType="number" 
+        android:maxLength="2"
+        />
+    <EditText
+        android:id="@+id/cad_mes"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cad_telRes"
+        android:layout_toRightOf="@+id/cad_dia"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="@string/lblMes"
+        android:inputType="number" 
+        android:maxLength="2"/>
+    <EditText
+        android:id="@+id/cad_ano"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cad_telRes"
+        android:layout_toRightOf="@+id/cad_mes"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="@string/lblAno"
+        android:inputType="number" 
+        android:maxLength="4"
+        />
 
     <CheckBox
         android:id="@+id/ckb_newsl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btn_cadastrar"
-        android:layout_alignLeft="@+id/cad_dataNasc"
-        android:text="@string/lblNews" />
+        android:layout_alignLeft="@+id/cad_dia"
+        android:text="@string/lblNews" 
+        />
 
 
     <EditText

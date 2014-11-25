@@ -37,7 +37,10 @@ public class CadastroActivity extends Activity {
 	EditText telCel;
 	EditText telRes ;
 	EditText telCom ;
-	EditText dataNasc;
+	EditText dia;
+	EditText mes;
+	EditText ano;
+	String dataNasc;
 	CheckBox newsLetter;
 
 	@Override
@@ -53,7 +56,9 @@ public class CadastroActivity extends Activity {
 		telCel = (EditText)findViewById(R.id.cad_cel);
 		telRes = (EditText)findViewById(R.id.cad_telRes);
 		telCom = (EditText)findViewById(R.id.cad_telCom);
-		dataNasc = (EditText)findViewById(R.id.cad_dataNasc);
+		dia = (EditText)findViewById(R.id.cad_dia);
+		mes = (EditText)findViewById(R.id.cad_mes);
+		ano = (EditText)findViewById(R.id.cad_ano);
 		newsLetter = (CheckBox)findViewById(R.id.ckb_newsl);
 		
 		btnEnviar.setOnClickListener(new OnClickListener() {
@@ -85,7 +90,9 @@ public class CadastroActivity extends Activity {
         		telCel = (EditText)findViewById(R.id.cad_cel);
         		telRes = (EditText)findViewById(R.id.cad_telRes);
         		telCom = (EditText)findViewById(R.id.cad_telCom);
-        		dataNasc = (EditText)findViewById(R.id.cad_dataNasc);
+        		dia = (EditText)findViewById(R.id.cad_dia);
+        		mes = (EditText)findViewById(R.id.cad_mes);
+        		ano = (EditText)findViewById(R.id.cad_ano);
         		newsLetter = (CheckBox)findViewById(R.id.ckb_newsl);
             		
         		
@@ -99,24 +106,9 @@ public class CadastroActivity extends Activity {
 				 String sendTelCel = telCel.getText().toString();
 				 String sendTelRes = telRes.getText().toString();
 				 String sendTelCom = telCom.getText().toString();
-				 String sendDataNasc = dataNasc.getText().toString();
-				 
-				 String[] data = sendDataNasc.split("/");
-				 
-//				 if (data.length!=3 || data[2].length()!=4) {
-//				 	Toast tost = Toast.makeText(getApplicationContext(), "Preencha a data no formato dd/mm/aaaa", Toast.LENGTH_SHORT);
-//					tost.setGravity(Gravity.TOP, 0, 50);
-//					tost.show();
-//					return null;
-//				 }
-				 
-				 String newDate = "";
-				 for (int i = data.length - 1; i >= 0 ; i--) {
-					newDate += data[i];
-					if(i!=0)
-						newDate+="/";
-				}
-				 sendDataNasc = newDate;
+				 dataNasc = ano.getText().toString()+"/" +
+						 mes.getText().toString()+"/" +
+						 dia.getText().toString();
 				 
 				 boolean sendNewsletter = newsLetter.isChecked();
             	
@@ -137,8 +129,8 @@ public class CadastroActivity extends Activity {
             		postParams.add(new BasicNameValuePair("telCom", sendTelCom));
             	if(!sendTelRes.isEmpty())
             		postParams.add(new BasicNameValuePair("telRes", sendTelRes));
-            	if(!sendDataNasc.isEmpty())
-            		postParams.add(new BasicNameValuePair("dataNasc", sendDataNasc));
+            	if(!dataNasc.isEmpty())
+            		postParams.add(new BasicNameValuePair("dataNasc", dataNasc));
             	if (sendNewsletter) {
             		postParams.add(new BasicNameValuePair("newsletter", "on"));
 				}

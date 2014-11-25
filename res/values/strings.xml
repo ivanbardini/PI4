@@ -14,7 +14,9 @@
     <string name="lblTelComercial">Telefone comercial</string>
     <string name="lblTelCelular">Telefone celular</string>
     <string name="lblTelResidencial">Telefone residencial</string>
-    <string name="lblDataNascimento">Data de nascimento - dd/mm/aaaa</string>
+    <string name="lblDia">Dia</string>
+    <string name="lblMes">Mes</string>
+    <string name="lblAno">Ano</string>
     <string name="lblNews">Deseja receber novidades?</string>
     <string name="btn_lerQRCode">Ler QRCode</string>
     <string name="lbl_lendo">Lendo</string>
