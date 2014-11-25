@@ -69,7 +69,7 @@ public class ProdutoFragment  extends Fragment {
 								wine.setNomeProduto(obj.getString("nomeProduto"));
 								wine.setPrecProduto(Double.parseDouble(obj.get("precProduto").toString()));
 								wine.setDescontoPromocao(Double.parseDouble(obj.get("descontoPromocao").toString()));
-								wine.setPrecFinal(Double.parseDouble(obj.get("precFinal").toString()));
+								wine.setPrecFinal(Double.parseDouble(obj.get("precoFinal").toString()));
 								wine.setDescProduto(obj.getString("descProduto"));
 								wine.setNomeCategoria(obj.getString("nomeCategoria"));
 							} catch (Exception e) {

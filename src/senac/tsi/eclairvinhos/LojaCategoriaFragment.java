@@ -23,6 +23,7 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 
 public class LojaCategoriaFragment  extends Fragment {
@@ -59,31 +60,33 @@ public class LojaCategoriaFragment  extends Fragment {
 		//getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1b1b1b")));
 		String newUrl = url + idCategoria;
 		// Creating volley request obj
-		StringRequest movieReq = new StringRequest(newUrl,
-				new Response.Listener<String>() {
+		JsonArrayRequest movieReq = new JsonArrayRequest(newUrl,
+				new Response.Listener<JSONArray>() {
 					@Override
-					public void onResponse(String response) {
+					public void onResponse(JSONArray response) {
 						Log.d(TAG, response.toString());
 						hidePDialog();
 						
 						// Parsing json
 						//for (int i = 0; i < response.length(); i++) {
 							try {
-								response = response.replace("}", "},");
-								response = "["+response+"]";
-								response = response.replace("},]","}]");
-								JSONArray jsonArr = new JSONArray(response);
+//								response = response.replace("}", "},");
+//								response = "["+response+"]";
+//								response = response.replace("},]","}]");
+//								JSONArray jsonArr = new JSONArray(response);
 								
-								for (int i = 0; i < jsonArr.length(); i++) {
-								JSONObject obj = jsonArr.getJSONObject(i);
-								Produto vinho = new Produto();
-								vinho.setIdProduto(Integer.parseInt(obj.get("idProduto").toString()));
-								vinho.setNomeProduto(obj.getString("nomeProduto"));
-								//vinho.setUrlImage(obj.getString("urlImage"));
-								vinho.setPrecProduto(Double.parseDouble(obj.get("precProduto").toString()));
-								vinho.setDescontoPromocao(Double.parseDouble(obj.get("descontoPromocao").toString()));
-								vinho.setPrecFinal(Double.parseDouble(obj.get("precFinal").toString()));
-
+								for (int i = 0; i < response.length(); i++) {
+									JSONObject obj;
+									obj = response.getJSONObject(i);
+									Produto vinho = new Produto();
+									if (obj!=null) {
+										vinho.setIdProduto(Integer.parseInt(obj.get("idProduto").toString()));
+										vinho.setNomeProduto(obj.getString("nomeProduto")); 
+										//vinho.setUrlImage(obj.getString("urlImage"));
+										vinho.setPrecProduto(Double.parseDouble(obj.get("precProduto").toString()));
+										vinho.setDescontoPromocao(Double.parseDouble(obj.get("descontoPromocao").toString()));
+										vinho.setPrecFinal(Double.parseDouble(obj.get("precFinal").toString()));
+									}
 								// adding movie to movies array
 								wineList.add(vinho);
 								}

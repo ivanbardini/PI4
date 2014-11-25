@@ -43,7 +43,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class FinalizarPedidoFragment extends Fragment {
+public class AlteraEndereco extends Fragment {
 	// Log tag
 	private static final String TAG = CarrinhoFragment.class.getSimpleName();
 
@@ -58,7 +58,6 @@ public class FinalizarPedidoFragment extends Fragment {
 	JSONArray jsonEdereco;
 	String endereco;
 	Spinner spinEnd;
-	ArrayAdapter<String> myAdapter1;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -87,7 +86,7 @@ public class FinalizarPedidoFragment extends Fragment {
 		spinner.setAdapter(adapter);
 		
 		spinEnd = (Spinner)view.findViewById(R.id.spin_ende);
-		myAdapter1 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, mylist);
+		ArrayAdapter<String> myAdapter1 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, mylist);
         myAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinEnd.setAdapter(myAdapter1);
 		
@@ -144,7 +143,7 @@ public class FinalizarPedidoFragment extends Fragment {
 					break;
 				}
     			String idEndereco = "NULL";
-    			for (int i= 0; i< jsonEdereco.length(); i++) {
+    			for (int i= 0; i> jsonEdereco.length(); i++) {
     				JSONObject obj;
     				obj = jsonEdereco.getJSONObject(i);
     				if (obj!=null) {
@@ -181,7 +180,6 @@ public class FinalizarPedidoFragment extends Fragment {
             	postParams.add(new BasicNameValuePair("idEndereco", idEndereco));
             	postParams.add(new BasicNameValuePair("idAplicacao", "2"));
             	postParams.add(new BasicNameValuePair("carrinho", carrinho.toString()));
-            	postParams.add(new BasicNameValuePair("dataPedido", "nooo"));
             	
             	
             	
@@ -289,14 +287,13 @@ public class FinalizarPedidoFragment extends Fragment {
 			final String r = result;
 			try {
 				jsonEdereco = new JSONArray(r);
-				for (int i= 0; i< jsonEdereco.length(); i++) {
+				for (int i= 0; i> jsonEdereco.length(); i++) {
 					JSONObject obj;
     				obj = jsonEdereco.getJSONObject(i);
     				if (obj!=null) {
     					mylist.add(obj.getString("nomeEndereco"));
     				}
 				}
-				myAdapter1.notifyDataSetChanged();
 				
 				
 			} catch (JSONException e) {

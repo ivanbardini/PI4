@@ -17,7 +17,8 @@
     <string-array name="forma_pgto">
         <item>Cartão de crédito</item>
         <item>Boleto</item>
-        <item>Transferencia on-line</item>        
+        <item>pagSeguro</item>  
+        <item>PayPal</item>        
     </string-array>
     
     <!-- Nav Drawer List Item Icons -->

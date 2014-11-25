@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import senac.tsi.eclairvinhos.adapter.CustomListAdapter;
 import senac.tsi.eclairvinhos.controller.VolleyController;
 import senac.tsi.eclairvinhos.model.Produto;
+import android.R.string;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
@@ -24,6 +25,7 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 
 public class LojaFragment extends Fragment {
@@ -77,21 +79,24 @@ public class LojaFragment extends Fragment {
 						// Parsing json
 						//for (int i = 0; i < response.length(); i++) {
 							try {
-								response = response.replace("}", "},");
-								response = "["+response+"]";
-								response = response.replace("},]","}]");
+//								response = response.replace("}", "},");
+//								response = "["+response+"]";
+//								response = response.replace("},]","}]");
 								JSONArray jsonArr = new JSONArray(response);
 								
 								for (int i = 0; i < jsonArr.length(); i++) {
-								JSONObject obj = jsonArr.getJSONObject(i);
-								Produto vinho = new Produto();
-								vinho.setIdProduto(Integer.parseInt(obj.get("idProduto").toString()));
-								vinho.setNomeProduto(obj.getString("nomeProduto"));
-								vinho.setNomeCategoria(obj.getString("nomeCategoria"));
-								vinho.setPrecProduto(Double.parseDouble(obj.get("precProduto").toString()));
-								vinho.setDescontoPromocao(Double.parseDouble(obj.get("descontoPromocao").toString()));
-								vinho.setPrecFinal(Double.parseDouble(obj.get("precFinal").toString()));
-
+									JSONObject obj;
+									obj = jsonArr.getJSONObject(i);
+									Produto vinho = new Produto();
+									if (obj!=null) {
+										
+										vinho.setIdProduto(Integer.parseInt(obj.get("idProduto").toString()));
+										vinho.setNomeProduto(obj.getString("nomeProduto"));
+										vinho.setNomeCategoria(obj.getString("nomeCategoria"));
+										vinho.setPrecProduto(Double.parseDouble(obj.get("precProduto").toString()));
+										vinho.setDescontoPromocao(Double.parseDouble(obj.get("descontoPromocao").toString()));
+										vinho.setPrecFinal(Double.parseDouble(obj.get("precFinal").toString()));
+									}
 								// adding movie to movies array
 								wineList.add(vinho);
 								}
