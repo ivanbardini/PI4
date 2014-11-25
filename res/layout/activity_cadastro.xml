@@ -8,96 +8,99 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="senac.tsi.eclairvinhos.CadastroActivity" >
 
-    <EditText
+   	<EditText
         android:id="@+id/nomeCompleto"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/cad_senha"
-        android:ems="10"
-        android:hint="Nome Completo" />
-
+        android:layout_alignLeft="@+id/cad_email"       
+        android:layout_marginTop="10dp"
+        android:hint="@string/lblNome" />
+    
     <EditText
         android:id="@+id/cad_senha"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cad_email"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="senha"
+        android:hint="@string/lblSenha"
+        android:layout_marginTop="10dp"
         android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/cad_email"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/nomeCompleto"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="email"
+        android:hint="@string/lblEmail"
+        android:layout_marginTop="10dp"
         android:inputType="textEmailAddress" >
 
         <requestFocus />
     </EditText>
 
-    <EditText
-        android:id="@+id/cad_telCom"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btn_cadastrar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/cad_senha"
-        android:layout_below="@+id/cad_cel"
-        android:ems="10"
-        android:hint="Telefone comercial"
-        android:inputType="phone" />
-
+        android:layout_alignLeft="@+id/ckb_newsl"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:text="@string/btn_cadastrar"
+        android:textColor="#FFF" />
+    
     <EditText
         android:id="@+id/cad_cel"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/cad_email"
-        android:layout_below="@+id/cad_cpf"
+        android:layout_alignLeft="@+id/cad_senha"
+        android:layout_below="@+id/cad_senha"
         android:ems="10"
-        android:hint="Telefone celular"
+        android:hint="@string/lblTelCelular"
+        android:layout_marginTop="10dp"
+        android:inputType="phone" />
+    
+   <EditText
+        android:id="@+id/cad_telCom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cad_cel"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="@string/lblTelComercial"
         android:inputType="phone" />
 
     <EditText
         android:id="@+id/cad_telRes"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/cad_telCom"
         android:layout_below="@+id/cad_telCom"
         android:ems="10"
-        android:hint="Telefone residencial"
+        android:layout_marginTop="10dp"
+        android:hint="@string/lblTelResidencial"
         android:inputType="phone" />
-
-    <Button
-        android:id="@+id/btn_cadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ckb_newsl"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:text="Cadastrar" />
-
+    
     <EditText
         android:id="@+id/cad_dataNasc"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cad_telRes"
-        android:layout_centerHorizontal="true"
         android:ems="10"
-        android:inputType="date"
-        android:hint="Data de nascimento" />
+        android:layout_marginTop="10dp"
+        android:hint="@string/lblDataNascimento"
+        android:inputType="date" />
 
     <CheckBox
         android:id="@+id/ckb_newsl"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cad_dataNasc"
-        android:layout_centerHorizontal="true"
-        android:text="Deseja receber Newsletter?" />
+        android:layout_above="@+id/btn_cadastrar"
+        android:layout_alignLeft="@+id/cad_dataNasc"
+        android:text="@string/lblNews" />
+
 
     <EditText
         android:id="@+id/cad_cpf"
