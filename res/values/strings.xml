@@ -25,11 +25,13 @@
     <string name="lblLogradouro">Logradouro</string>
     <string name="lblNumero">Número</string>
     <string name="lblCep">CEP</string>
+    <string name="lblCpf">CPF</string>
     <string name="lblComplemento">Complemento</string>
     <string name="lblCidade">Cidade</string>
     <string name="lblPais">País</string>
     <string name="lblUF">UF</string>
-    
+    <string name="btnFinalizarPedido">Finalizar Pedido</string>
+    <string name="btnCotinuarComprando">Cotinuar Comprando</string>    
     
 
     <!-- Nav Drawer Menu Items -->
