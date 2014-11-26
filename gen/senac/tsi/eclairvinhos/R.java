@@ -70,11 +70,12 @@ public final class R {
         public static final int list_selector=0x7f020011;
         public static final int logo_eclair2=0x7f020012;
         public static final int logo_home=0x7f020013;
+        public static final int logohome=0x7f020014;
     }
     public static final class id {
         public static final int ScanButton=0x7f0a0017;
         public static final int _preco=0x7f0a0024;
-        public static final int action_settings=0x7f0a0046;
+        public static final int action_settings=0x7f0a0047;
         public static final int btn_cadastrar=0x7f0a000c;
         public static final int btn_cadastrarEnd=0x7f0a0008;
         public static final int btn_cadastro=0x7f0a001a;
@@ -83,7 +84,7 @@ public final class R {
         public static final int btn_depois=0x7f0a001c;
         public static final int btn_enviar=0x7f0a001b;
         public static final int btn_finalizar=0x7f0a0036;
-        public static final int button1=0x7f0a0037;
+        public static final int button1=0x7f0a0038;
         public static final int cad_ano=0x7f0a0014;
         public static final int cad_cel=0x7f0a000e;
         public static final int cad_cpf=0x7f0a000f;
@@ -93,14 +94,14 @@ public final class R {
         public static final int cad_senha=0x7f0a000b;
         public static final int cad_telCom=0x7f0a0010;
         public static final int cad_telRes=0x7f0a0011;
-        public static final int camera=0x7f0a0047;
+        public static final int camera=0x7f0a0048;
         public static final int cameraPreview=0x7f0a0015;
         public static final int cat_descricao=0x7f0a0029;
         public static final int cat_nome=0x7f0a0028;
-        public static final int categoria=0x7f0a0044;
+        public static final int categoria=0x7f0a0045;
         public static final int ckb_newsl=0x7f0a000d;
         public static final int counter=0x7f0a002c;
-        public static final int desconto=0x7f0a0045;
+        public static final int desconto=0x7f0a0046;
         public static final int drawer_layout=0x7f0a001e;
         public static final int email=0x7f0a0019;
         public static final int end_cep=0x7f0a0003;
@@ -123,27 +124,28 @@ public final class R {
         public static final int item_quantidade=0x7f0a0025;
         public static final int list=0x7f0a002d;
         public static final int list_slidermenu=0x7f0a0020;
-        public static final int login=0x7f0a0048;
-        public static final int nome=0x7f0a0042;
+        public static final int login=0x7f0a0049;
+        public static final int nome=0x7f0a0043;
         public static final int nomeCompleto=0x7f0a0009;
-        public static final int num_qtd=0x7f0a003e;
-        public static final int preco=0x7f0a0043;
-        public static final int prod_add=0x7f0a003f;
-        public static final int prod_categoria=0x7f0a003b;
-        public static final int prod_descricao=0x7f0a003c;
-        public static final int prod_img=0x7f0a0038;
-        public static final int prod_nome=0x7f0a0039;
-        public static final int prod_preco=0x7f0a003a;
-        public static final int prod_qtd=0x7f0a003d;
-        public static final int prod_rem=0x7f0a0040;
+        public static final int num_qtd=0x7f0a003f;
+        public static final int preco=0x7f0a0044;
+        public static final int prod_add=0x7f0a0040;
+        public static final int prod_categoria=0x7f0a003c;
+        public static final int prod_descricao=0x7f0a003d;
+        public static final int prod_img=0x7f0a0039;
+        public static final int prod_nome=0x7f0a003a;
+        public static final int prod_preco=0x7f0a003b;
+        public static final int prod_qtd=0x7f0a003e;
+        public static final int prod_rem=0x7f0a0041;
         public static final int scanText=0x7f0a0016;
         public static final int senha=0x7f0a001d;
         public static final int spin_ende=0x7f0a0033;
         public static final int spin_pgto=0x7f0a0035;
         public static final int textView1=0x7f0a0034;
-        public static final int thumbnail=0x7f0a0041;
+        public static final int thumbnail=0x7f0a0042;
         public static final int title=0x7f0a002b;
         public static final int txtLabel=0x7f0a0030;
+        public static final int txtSobre=0x7f0a0037;
         public static final int txt_ende=0x7f0a0032;
     }
     public static final class layout {
@@ -165,8 +167,10 @@ public final class R {
         public static final int fragment_pages=0x7f03000f;
         public static final int fragment_photos=0x7f030010;
         public static final int fragment_produto=0x7f030011;
-        public static final int fragment_whats_hot=0x7f030012;
-        public static final int list_row=0x7f030013;
+        public static final int fragment_sobre=0x7f030012;
+        public static final int fragment_ssobre=0x7f030013;
+        public static final int fragment_whats_hot=0x7f030014;
+        public static final int list_row=0x7f030015;
     }
     public static final class menu {
         public static final int cadastra_endereco=0x7f090000;
@@ -185,7 +189,7 @@ public final class R {
         public static final int btn_logarDepois=0x7f060005;
         /**  Content Description 
          */
-        public static final int desc_list_item_icon=0x7f06001f;
+        public static final int desc_list_item_icon=0x7f060020;
         public static final int dsc_logo=0x7f060006;
         public static final int hello_world=0x7f060001;
         public static final int lblAno=0x7f06000f;
@@ -209,11 +213,12 @@ public final class R {
         public static final int lblUF=0x7f06001c;
         public static final int lbl_lendo=0x7f060012;
         public static final int logoCat=0x7f060013;
-        public static final int title_activity_cadastra_endereco=0x7f060024;
-        public static final int title_activity_cadastro=0x7f060023;
-        public static final int title_activity_camera=0x7f060022;
-        public static final int title_activity_login=0x7f060020;
-        public static final int title_activity_x=0x7f060021;
+        public static final int sobre=0x7f06001f;
+        public static final int title_activity_cadastra_endereco=0x7f060025;
+        public static final int title_activity_cadastro=0x7f060024;
+        public static final int title_activity_camera=0x7f060023;
+        public static final int title_activity_login=0x7f060021;
+        public static final int title_activity_x=0x7f060022;
     }
     public static final class style {
         /** 

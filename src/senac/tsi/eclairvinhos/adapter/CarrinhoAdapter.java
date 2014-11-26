@@ -79,7 +79,7 @@ public class CarrinhoAdapter extends BaseAdapter {
 		thumbNail.setImageUrl(m.getProduto().getUrlImage(), imageLoader);
 		nome.setText(m.getProduto().getNomeProduto());
 		quantidade.setText(String.valueOf(m.getQtd()));
-		precFin = String.valueOf(m.getProduto().getPrecFinal() * m.getQtd());
+		precFin = String.format("%10.2f", m.getProduto().getPrecFinal() * m.getQtd());
 		preco.setText(precFin);
 //		Button add = (Button)convertView.findViewById(R.id.item_add);
 //		Button rem = (Button)convertView.findViewById(R.id.item_rem);

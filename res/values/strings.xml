@@ -32,7 +32,7 @@
     <string name="lblUF">UF</string>
     <string name="btnFinalizarPedido">Finalizar Pedido</string>
     <string name="btnCotinuarComprando">Cotinuar Comprando</string>    
-    <string name="txtSobre">Este aplicativo foi criado por Ivan Bardini, Thaís Souza e Rafael Torres para o Projeto integrador do curso de Tecnologia em Sistemas para Internet do Senac.</string>
+    <string name="sobre">Este aplicativo foi criado por Ivan Bardini, Thaís Souza e Rafael Torres para o Projeto integrador do curso de Tecnologia em Sistemas para Internet do Senac.</string>
     
 
     <!-- Nav Drawer Menu Items -->
